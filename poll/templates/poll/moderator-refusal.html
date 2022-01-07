@@ -1,0 +1,31 @@
+{% load widget_tweaks %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Refusal</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container detail-container">
+        {% include 'poll/include-menu.html' %}
+
+        {% include 'poll/include-detail.html' %}
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <p>Write the reason(s) for refusal:</p>
+            {% render_field form.refusal_reason placeholder="Text..." %}
+
+            <div class="center">
+                <input type="submit" name="choice" value="SEND" class="standard-button one-styled-button">
+            </div>
+        </form>
+
+        {% include 'poll/include-moderator-navbar.html' %}
+    </div>
+</body>
+</html>

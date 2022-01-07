@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Notice</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Form's Been Sent</h1>
+        <p>Form has been sent. Please, wait until it will be moderated. Result will be sent on your inner mail.</p>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

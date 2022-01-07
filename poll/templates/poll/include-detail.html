@@ -1,0 +1,19 @@
+<div style="display: flex;">
+    <div class="left-side">
+        <img src="{{ candidate.avatar.url }}" alt="A candidate's picture" style="width: 200px; padding: 8px">
+        <h3>Tel.:</h3>
+        {{ candidate.telephone }}
+        <h3>E-mail:</h3>
+        <span class="email">
+            {{ candidate.email }}
+        </span>
+    </div>
+
+    <div class="right-side">
+        <h2>{{ candidate.name }} - {{ candidate.fraction }}</h2>
+        <h3>About me:</h3>
+        {{ candidate.biography }}
+        <h3>My targets:</h3>
+        {{ candidate.targets }}
+    </div>
+</div>

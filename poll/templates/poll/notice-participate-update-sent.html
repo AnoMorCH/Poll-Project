@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Notice</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Form's Been Saved</h1>
+        <p>Form has been saved. If you want to continue writing the form, please press 'Participate' button again.</p>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

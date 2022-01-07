@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Notice</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>WARNING!</h1>
+        <p>
+            Candidate is already exists. It is <b>impossible to create candidates with coinciding names</b>. Your
+            form has been saved, and you can continue to edit that.
+        </p>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

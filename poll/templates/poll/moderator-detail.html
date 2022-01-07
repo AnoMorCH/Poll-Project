@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Moderate a User</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container detail-container">
+        {% include 'poll/include-menu.html' %}
+
+        {% include 'poll/include-detail.html' %}
+
+        <form action="{% url 'poll:moderator-moderate' %}" method="post">
+            {% csrf_token %}
+
+            <div style="text-align: center;">
+                <input type="submit" name="choice" value="ACCEPT" class="standard-button two-styled-button">
+                <input type="submit" name="choice" value="REFUSE" class="standard-button two-styled-button">
+            </div>
+
+            <input type="hidden" id="candidate-id" name="candidate-id" value="{{ candidate.id }}">
+        </form>
+
+        <br>
+
+        {% include 'poll/include-moderator-navbar.html' %}
+    </div>
+</body>
+</html>

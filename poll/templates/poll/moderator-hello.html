@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Homepage</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Welcome, moderator!</h1>
+        <p>We are glad to greet you in this page. Here you can read an instruction about your job and start working.</p>
+
+        {% include 'poll/include-moderator-navbar.html' %}
+    </div>
+</body>
+</html>

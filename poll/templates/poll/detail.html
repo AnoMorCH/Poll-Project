@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Candidate's Data</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container detail-container">
+        {% include 'poll/include-menu.html' %}
+
+        <p>{% include 'poll/include-detail.html' %}</p>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

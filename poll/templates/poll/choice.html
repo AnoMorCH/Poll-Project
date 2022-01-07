@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Choice</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Choice</h1>
+        <p>Please choose a preferred candidate.</p>
+
+        <form action="{% url 'poll:vote' %}" method="post">
+            {% csrf_token %}
+
+            <fieldset style="border:none">
+                {% for choice in candidates_list %}
+                    {% if choice.moderated %}
+                        <label class="radio" for="choice{{ forloop.counter }}">
+                            <input class="radio-input" type="radio" id="choice{{ forloop.counter }}" name="choice"
+                                   value="{{ choice.id }}">
+                            <div class="radio-radio"></div>
+                            {{ choice.name }} ({{ choice.fraction }})
+                        </label>
+
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            </fieldset>
+
+            <input type="submit" value="VOTE" class="standard-button one-styled-button">
+        </form>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

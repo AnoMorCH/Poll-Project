@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Result</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Result</h1>
+        {% for candidate in candidates_list %}
+            <ul>
+                <li>{{ candidate.name }} ({{ candidate.fraction }}) - {{ candidate.votes }}</li>
+            </ul>
+        {% endfor %}
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

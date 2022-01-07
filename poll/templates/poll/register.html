@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Register</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        <h1>Register</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.username.label }}
+            {{ form.username }}
+
+            {{ form.email.label }}
+            {{ form.email }}
+
+            {{ form.password1.label }}
+            {{ form.password1 }}
+
+            {{ form.password2.label }}
+            {{ form.password2 }}
+
+            {{ form.errors }}
+
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+
+            <input type="submit" value="CREATE A NEW USER" class="standard-button one-styled-button">
+
+            <div style="text-align: center">
+                Already have an account? Please, <a href="{% url 'poll:login' %}">login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

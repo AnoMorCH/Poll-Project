@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="up-right-corner">
+    <span class="user-data">{{ username }} ({{ role }})</span>
+
+    <span class="icon-img">
+        {% if checked_by_moderator %}
+            <a href="{% url 'poll:notifications' %}" title="Notifications" class="not-underlined">
+                <img src="{% static 'poll/images/notification.png' %}" alt="Notification">
+            </a>
+        {% endif %}
+
+
+        <a href="{% url 'poll:logout' %}" title="Logout" class="not-underlined">
+            <img src="{% static 'poll/images/logout.png' %}" alt="Logout image">
+        </a>
+    </span>
+</div>

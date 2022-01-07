@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Warning</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>WARNING!</h1>
+        <p>
+            If you change your profile status, you will get access to create your participate form. In this case,
+            your status will be changed on 'Candidate'!
+        </p>
+
+        <p style="text-align: center;">Want to continue?</p>
+
+        <table class="center">
+            <tr>
+                <td class="wide-td"><a href="{% url 'poll:create-participate-form' %}">Yes</a></td>
+                <td class="wide-td"><a href="{% url 'poll:hello' %}">No</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

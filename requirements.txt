@@ -1,0 +1,7 @@
+asgiref==3.4.1
+backports.zoneinfo==0.2.1
+Django==4.0.1
+django-widget-tweaks==1.4.9
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+sqlparse==0.4.2

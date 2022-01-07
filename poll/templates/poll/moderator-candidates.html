@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Moderate</title>
+</head>
+<body class="other-pages standard-font">
+<div class="container standard-container">
+    {% include 'poll/include-menu.html' %}
+
+    <h1>Moderate</h1>
+    <p>Click on candidate's name to moderate him.</p>
+
+    {% for candidate in candidates_list %}
+        {% if candidate.moderated == False and candidate.refusal_reason == '' %}
+            <ul>
+                <li>
+                    <a href="{% url 'poll:moderator-detail' candidate.id %}">{{ candidate.name }}
+                        ({{ candidate.fraction }})</a>
+                </li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+
+    {% include 'poll/include-moderator-navbar.html' %}
+</div>
+</body>
+</html>

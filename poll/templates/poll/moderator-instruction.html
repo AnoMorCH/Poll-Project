@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Instruction</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Instruction</h1>
+        <p>Over here is an instruction for moderators.</p>
+        <div class="indentation"><p>{{ instruction|linebreaks }}</p></div>
+        <p>If you are not satisfied with quality of the instruction, please write your admin about that.</p>
+
+        {% if role == 'Admin' %}
+            <form method="post">
+                {% csrf_token %}
+
+                <input type="submit" name="choice" value="EDIT THE INSTRUCTION"
+                       class="standard-button one-styled-button">
+            </form>
+        {% endif %}
+
+        {% include 'poll/include-moderator-navbar.html' %}
+    </div>
+</body>
+</html>

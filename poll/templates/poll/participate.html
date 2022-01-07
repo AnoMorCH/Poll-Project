@@ -1,0 +1,64 @@
+{% load widget_tweaks %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Participate</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        {% if group.name == 'Candidate Process Draft' %}
+            <h1>Update the Participation Form</h1>
+        {% else %}
+            <h1>Participate</h1>
+        {% endif %}
+
+        {% if checked_by_moderator %}
+            The refusal reason:
+            <p>{{ refusal_reason }}</p>
+        {% endif %}
+
+        <form class="customized-input" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            Name:
+            {% render_field form.name placeholder="Name Surname" %}
+
+            Fraction:
+            {% render_field form.fraction placeholder="Fraction" %}
+
+            Telephone:
+            {% render_field form.telephone placeholder="+7(123)456-78-90" %}
+
+            Targets:
+            {% render_field form.targets placeholder="Make something, decline something, etc" %}
+
+            Email:
+            {% render_field form.email placeholder="abc@mail.com" %}
+
+            Biography:
+            {% render_field form.biography placeholder="Text" %}
+
+            Avatar:
+            <div style="margin: 10px;">
+                {% render_field form.avatar %}
+            </div>
+
+            {{ form.errors }}
+            {{ form.non_field_errors }}
+
+            <p><div style="text-align: center;">
+                <input type="submit" name='draft version' value="SAVE DRAFT" class="standard-button two-styled-button">
+                <input type="submit" name='final version' value="PARTICIPATE" class="standard-button two-styled-button">
+            </div></p>
+        </form>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

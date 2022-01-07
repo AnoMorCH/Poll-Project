@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Candidates</title>
+</head>
+<body class="other-pages standard-font">
+<div class="container standard-container">
+    {% include 'poll/include-menu.html' %}
+
+    <h1>List of Candidates</h1>
+    <p>Click on candidate name to know more about.</p>
+
+    {% for candidate in candidates_list %}
+        {% if candidate.moderated == True %}
+            <ul>
+                <li>
+                    <a href="{% url 'poll:detail' candidate.id %}">{{ candidate.name }} ({{ candidate.fraction }})</a>
+                </li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+
+    {% include 'poll/include-standard-navbar.html' %}
+</div>
+</body>
+</html>

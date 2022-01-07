@@ -1,0 +1,32 @@
+{% load widget_tweaks %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Edit Instruction</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Edit Instruction</h1>
+
+        <h3>The Previous Instruction</h3>
+        {{ instruction|linebreaks }}
+
+        <h3>The New Instruction</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {% render_field form.instruction placeholder="Text.." %}
+
+            <input type="submit" name="choice" value="SAVE" class="standard-button one-styled-button">
+        </form>
+
+        {% include 'poll/include-moderator-navbar.html' %}
+    </div>
+</body>
+</html>

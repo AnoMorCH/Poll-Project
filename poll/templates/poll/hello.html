@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Homepage</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+        <h1>Presidential Election</h1>
+        <p>
+            In this page you can see all candidates, participate and make a choice for the candidate.
+            Remember: Each vote is important!
+        </p>
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>

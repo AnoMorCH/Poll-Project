@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Login</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        <h1>Login</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            Login
+            <input type="text" name="username">
+
+            Password
+            <input type="password" name="password">
+
+            <input type="submit" value="SUBMIT" class="standard-button one-styled-button">
+
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+
+            <div style="text-align: center;">
+                Don't have an account? Please, <a href="{% url 'poll:register' %}">register</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<table class="center">
+    <tr>
+        <td class="wide-td"><a href="{% url 'poll:hello' %}">Home</a></td>
+        <td class="wide-td"><a href="{% url 'poll:candidates' %}">Candidates</a></td>
+    
+        {% if not voted %}
+            <td class="wide-td"><a href="{% url 'poll:choice' %}">Make a Choice</a></td>
+        {% else %}
+            <td class="wide-td"><a href="{% url 'poll:results' %}">Results</a></td>
+        {% endif %}
+
+        {% if candidate_status == 'Application Process' %}
+            <td class="wide-td"><a href="{% url 'poll:create-participate-form' %}">Participate</a></td>
+        {% elif candidate_status == 'Application Draft' %}
+            <td class="wide-td"><a href="{% url 'poll:update-participate-form' username %}">Participate</a></td>
+        {% elif candidate_status == 'Application Final' %}
+            <td class="wide-td"><a href="{% url 'poll:participate-sent' %}">Participate</a></td>
+        {% else %}
+            <td class="wide-td"><a href="{% url 'poll:participate-warning-change-status' %}">Participate</a></td>
+        {% endif %}
+    </tr>
+</table>

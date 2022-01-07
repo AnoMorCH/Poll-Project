@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'poll/include-head.html' %}
+
+    <title>Notification</title>
+</head>
+<body class="other-pages standard-font">
+    <div class="container standard-container">
+        {% include 'poll/include-menu.html' %}
+
+        <h1>Notifications</h1>
+        <p>
+            {% if moderated == True %}
+                <h3>Congratulations! Your participation form has been accepted.</h3>
+            {% else %}
+                <h3>Unfortunately, your participation form has been declined due reason:</h3>
+                <p>{{ refusal_reason }}</p>
+            {% endif %}
+        </p>
+
+        {% include 'poll/include-standard-navbar.html' %}
+    </div>
+</body>
+</html>
