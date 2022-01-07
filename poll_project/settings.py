@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'POLL_PROJECT',
         'USER': 'postgres',
         'PASSWORD': 'a0k1hAbar4-',
-        'HOST': 'localhost',
+        'HOST': 'poll-project.cq9uqxsbvxmu.eu-central-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
