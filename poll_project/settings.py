@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,16 +24,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4f-(8&j#(z32!e33xp(mfbaikh!k7c8-j&tc+b^%k5b+pt&6ls'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'anomorch-poll-project.herokuapp.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'poll.apps.PollConfig',
+
     'widget_tweaks',
+    'storages',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +50,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -89,6 +99,9 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -130,13 +143,22 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
 
-# if it doesn't work properly, try use hard code name
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'poll/static')
 ]
 
-# id0 = 'poll/static'
 MEDIA_ROOT = os.path.join(STATICFILES_DIRS[0], 'poll/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+AWS_ACCESS_KEY_ID = 'AKIAT3JE54ZDXSHR5CGW'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'anomorch-poll-project'
+
+AWS_S3_REGION_NAME = 'us-west-2'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
