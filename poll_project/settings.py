@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4f-(8&j#(z32!e33xp(mfbaikh!k7c8-j&tc+b^%k5b+pt&6ls'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'anomorch-poll-project.herokuapp.com',
