@@ -330,6 +330,9 @@ def is_user_voted(request):
     if not request.user.groups.exists():
         return False
 
+    if len(request.user.groups.all()) == 2:
+        return True
+
     current_group = request.user.groups.all()[0]
 
     if current_group.name == 'Voted':

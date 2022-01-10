@@ -13,9 +13,11 @@
 
         <h1>Result</h1>
         {% for candidate in candidates_list %}
-            <ul>
-                <li>{{ candidate.name }} ({{ candidate.fraction }}) - {{ candidate.votes }}</li>
-            </ul>
+            {% if candidate.moderated == True %}
+                <ul>
+                    <li>{{ candidate.name }} ({{ candidate.fraction }}) - {{ candidate.votes }}</li>
+                </ul>
+            {% endif %}
         {% endfor %}
 
         {% include 'poll/include-standard-navbar.html' %}
