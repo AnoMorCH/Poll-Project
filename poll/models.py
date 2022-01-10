@@ -3,6 +3,11 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.models import AbstractUser
 
 
+def user_directory_path(instance, filename):
+    print(type(instance))
+    return '{0}/{1}'.format(instance.author, filename)
+
+
 class Candidate(models.Model):
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
@@ -14,7 +19,7 @@ class Candidate(models.Model):
     votes = models.IntegerField(default=0)
     refusal_reason = models.TextField(default='')
     moderated = models.BooleanField(default=False)
-    avatar = models.ImageField(default='default-avatar.jpeg', null=True, blank=True)
+    avatar = models.ImageField(default='default-avatar.jpeg', upload_to=user_directory_path, null=True, blank=True)
 
 
 class AdminData(models.Model):
