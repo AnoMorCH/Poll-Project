@@ -1,6 +1,8 @@
+{% load static %}
+
 <div style="display: flex;">
     <div class="left-side">
-        <img src="{{ candidate.avatar.url }}" alt="A candidate's picture" style="width: 200px; padding: 8px">
+        <span class="avatar-img"><img src="{{ candidate.avatar.url }}" alt="A candidate's picture"></span>
         <h3>Tel.:</h3>
         {{ candidate.telephone }}
         <h3>E-mail:</h3>
