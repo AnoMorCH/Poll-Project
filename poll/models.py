@@ -4,7 +4,6 @@ from django.contrib.auth.models import AbstractUser
 
 
 def user_directory_path(instance, filename):
-    print(type(instance))
     return '{0}/{1}'.format(instance.author, filename)
 
 
