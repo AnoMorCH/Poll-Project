@@ -12,10 +12,11 @@
         <h1>Notifications</h1>
         <p>
             {% if moderated == True %}
-                <h3>Congratulations! Your participation form has been accepted.</h3>
+                <p>Congratulations! Your participation form has been accepted.</p>
             {% else %}
-                <h3>Unfortunately, your participation form has been declined due reason:</h3>
+                <p>Unfortunately, your participation form has been declined due the reason:</p>
                 <p>{{ refusal_reason }}</p>
+                <p>To send form again, please press the button 'Participate' below.</p>
             {% endif %}
         </p>
 
