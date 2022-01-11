@@ -65,10 +65,10 @@ Moderator, he will be Application Final one.</p>
 
 4. Also:<br />
 
-<p>1. If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
+<p>1) If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
 bugs (the code is still under work).</p>
 
-<p>2. Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.</p>  
+<p>2) Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.</p>  
 
 <p>
   Contacts <br />
