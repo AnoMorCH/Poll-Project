@@ -17,14 +17,14 @@ admin system to control the whole process.</p>
 2. How To Use Program: <br />
 <p>When you first open the web page, you have to pass the registration process.</p>
 
-Elector xperience <br />
+Elector experience <br />
 After that you have an Elector status. You can read more about a specific candidate, choose a candidate you like and take part in elections. 
 Important to notice, you have only one opportunity to vote, and after you have become a candidate, you can’t switch back to Elector status.
 
 Candidate experience <br />
 If you are a candidate, you still have an opportunity to vote. After you have finished writing the participation form, you have to send it 
 and wait until it will be checked by the moderator. If your form is accepted, you will gain a notification about it. Otherwise, you will also 
-take a notice with a reason for refusal
+take a notice with a reason for refusal.
 
 Moderator experience <br />
 To become moderator, you have to have a deal with your administrator. In the moderator page you can read an instruction for the job and moderate 
@@ -63,10 +63,12 @@ Moderator, he will be Application Final one.</p>
 
 <p>To undestand the concept better, please watch this scheme: https://i.imgur.com/Pq4tF8J.jpg.</p>
 
-<p>If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
+4. Also:<br />
+
+<p>1. If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
 bugs (the code is still under work).</p>
 
-<p>Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.</p>  
+<p>2. Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.</p>  
 
 <p>
   Contacts <br />
