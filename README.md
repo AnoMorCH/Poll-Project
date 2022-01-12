@@ -2,10 +2,9 @@
  
 If you are interested in open source, you are always welcome to make some contributions!
 
-Poll Project <br />
-Version: 1.0 <br />
-Date Updated: 06/01/21 (DD/MM/YY order) <br />
-
+* Poll Project
+* Version: 1.0
+* Date Updated: 06/01/21 (DD/MM/YY order)
 
 ## 1. Overview
 <p>This is my pet project. I have done it to expand my experience in Django Web Framework. Poll Project helps communities make elections 
