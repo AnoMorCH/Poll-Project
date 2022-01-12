@@ -7,13 +7,13 @@ If you are interested in open source, you are always welcome to make some contri
 
 Contents:
 
-* [link](#1-Overview)
-* [link](#2-How-To-Use-Program)
-* [link](#3-Technical-Details)
-* [link](#4-Also)
+1. [Overview](#1-Overview)
+2. [How To Use Program](#2-How-To-Use-Program)
+3. [Technical Details](#3-Technical-Details)
+4. [Also](#4-Also)
 
 ## 1. Overview
-This is my pet project. I have done it to expand my experience in Django Web Framework. Poll Project helps communities make elections
+This is my pet project. I have done it to expand my experience in [Django Web Framework](https://www.djangoproject.com). Poll Project helps communities make elections
 to choose a candidate for some position. In the current situation, it is done to choose a president but it can be simply changed.
 Everyone can make a choice and become a candidate. To control if the form is correct there is a moderator system. Also there is an 
 admin system to control the whole process.
@@ -36,8 +36,8 @@ other users. You can’t visit pages which are acceptable for Elector and Candid
 
 ### Admin experience
 You can visit all pages available for Elector, Moderator and Candidate. However, IT IS STRONGLY RECOMMENDED to not do anything. If you want to
-control the web page, you need to write ‘admin’ after the domain (my-site.com/admin). But you can change an instruction on the moderator's pag
-if you click the ‘Instruction’ button.
+control the web page, you need to write `admin` after the domain `my-site.com/admin`. But you can change an instruction on the moderator's pag
+if you click the `Instruction` button.
 
 
 ## 3. Technical Details
@@ -71,5 +71,5 @@ bugs (the code is still under work).
 2. Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.  
 
 ### Contacts 
-* e-mail: morozovantonaleksandrovich@gmail.com 
-* telegram: https://t.me/anomorch (preferable) 
+* e-mail: [morozovantonaleksandrovich@gmail.com](mailto:morozovantonaleksandrovich@gmail.com)
+* telegram: [anomorch](https://t.me/anomorch) (preferable) 
