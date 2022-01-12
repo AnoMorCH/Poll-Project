@@ -2,7 +2,6 @@
  
 If you are interested in open source, you are always welcome to make some contributions!
 
-* Poll Project
 * Version: 1.0
 * Date Updated: 06/01/21 (DD/MM/YY order)
 
