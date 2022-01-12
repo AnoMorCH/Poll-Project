@@ -7,14 +7,14 @@ Version: 1.0 <br />
 Date Updated: 06/01/21 (DD/MM/YY order) <br />
 
 
-1. Overview: <br />
+## 1. Overview
 <p>This is my pet project. I have done it to expand my experience in Django Web Framework. Poll Project helps communities make elections 
 to choose a candidate for some position. In the current situation, it is done to choose a president but it can be simply changed. 
 Everyone can make a choice and become a candidate. To control if the form is correct there is a moderator system. Also there is an 
 admin system to control the whole process.</p>
 
 
-2. How To Use Program: <br />
+## 2. How To Use Program
 <p>When you first open the web page, you have to pass the registration process.</p>
 
 Elector experience <br />
@@ -36,7 +36,7 @@ control the web page, you need to write ‘admin’ after the domain (my-site.co
 if you click the ‘Instruction’ button.
 
 
-3. Technical Details:<br />
+## 3. Technical Details
 <p>In the project there are the groups and roles system to restrict access to pages.</p>
 
 <p>There are three types of roles:</p>
@@ -63,8 +63,7 @@ Moderator, he will be Application Final one.</p>
 
 <p>To undestand the concept better, please watch this scheme: https://i.imgur.com/Pq4tF8J.jpg.</p>
 
-4. Also:<br />
-
+## 4. Also
 <p>1) If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
 bugs (the code is still under work).</p>
 
