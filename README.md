@@ -63,7 +63,9 @@ the candidate form, he will have Application Process status; if he save the form
 hasn’t been accessed by Moderator, he will has Application Draft one; if everything is alright and he has gained permission from 
 Moderator, he will be Application Final one.
 
-To undestand the concept better, please watch this scheme: https://i.imgur.com/Pq4tF8J.jpg.
+To undestand the concept better, please watch this scheme:
+
+<img alt="Scheme" src="https://i.imgur.com/Pq4tF8J.jpg" height="160" />https://i.imgur.com/Pq4tF8J.jpg.
 
 ## 4. Also
 1. If you are an administrator, it is strongly recommended using only Moderator’s pages and admin panel to not raise some 
@@ -72,4 +74,4 @@ bugs (the code is still under work).
 
 ### Contacts 
 * e-mail: [morozovantonaleksandrovich@gmail.com](mailto:morozovantonaleksandrovich@gmail.com)
-* telegram: [anomorch](https://t.me/anomorch) (preferable) 
+* telegram: <a href="https://t.me/anomorch" target="_blank">anomorch</a> (preferable) 
