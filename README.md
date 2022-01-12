@@ -5,6 +5,13 @@ If you are interested in open source, you are always welcome to make some contri
 * Version: 1.0
 * Date Updated: 06/01/21 (DD/MM/YY order)
 
+Contents:
+
+* [link](#1-Overview)
+* [link](#2-How-To-Use-Program)
+* [link](#3-Technical-Details)
+* [link](#4-Also)
+
 ## 1. Overview
 This is my pet project. I have done it to expand my experience in Django Web Framework. Poll Project helps communities make elections
 to choose a candidate for some position. In the current situation, it is done to choose a president but it can be simply changed.
@@ -28,8 +35,8 @@ To become moderator, you have to have a deal with your administrator. In the mod
 other users. You can’t visit pages which are acceptable for Elector and Candidate, and they too can’t see pages available for you.
 
 ### Admin experience
-You can visit all pages available for Elector, Moderator and Candidate. However, IT IS STRONGLY RECOMMENDED to not do anything. If you want to 
-control the web page, you need to write ‘admin’ after the domain (my-site.com/admin). But you can change an instruction on the moderator's page 
+You can visit all pages available for Elector, Moderator and Candidate. However, IT IS STRONGLY RECOMMENDED to not do anything. If you want to
+control the web page, you need to write ‘admin’ after the domain (my-site.com/admin). But you can change an instruction on the moderator's pag
 if you click the ‘Instruction’ button.
 
 
@@ -41,8 +48,7 @@ There are three types of roles:
   1. Elector
   2. Candidate
   3. Moderator
-
-  
+ 
 And five types of groups:
 
   1. Voted
@@ -64,7 +70,6 @@ To undestand the concept better, please watch this scheme: https://i.imgur.com/P
 bugs (the code is still under work).
 2. Every view is divided on the classes: standard, participate, moderator and notification to simplify future development.  
 
-
-###  Contacts 
+### Contacts 
 * e-mail: morozovantonaleksandrovich@gmail.com 
 * telegram: https://t.me/anomorch (preferable) 
